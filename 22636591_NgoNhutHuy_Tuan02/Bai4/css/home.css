@@ -1,0 +1,34 @@
+
+.content {
+    position: relative;
+    background-image: url(../images/sample.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    min-height: 800px;
+}
+
+article {
+    position: absolute;
+    width: 30%;
+    background-color: #dac39a;
+    border: 3px solid rgb(74, 67, 67);
+    padding: 4px;
+}
+
+.content .item-1 {
+    top: 0;
+    right: 0;
+}
+
+.content .item-2 {
+    top: 40%;
+    left: 0;
+}
+
+.content .item-3 {
+    bottom: 10%;
+    right: 0;
+}

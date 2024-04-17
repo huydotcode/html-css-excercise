@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="22636591-NgoNhutHuy-Tuan8" content="HTML Co Ban" />
+    <meta name="22636591" content="NgoNhutHuy" />
+    <meta name="IUH" content="FIT-Web Design" />
+
+    <title>Bài 1</title>
+
+    <link
+      rel="stylesheet"
+      href="../../lib/bootstrap-4.6.2-dist/css/bootstrap.min.css"
+    />
+    <script src="../../lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="../../lib/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        min-height: 150vh;
+      }
+
+      img {
+        max-height: 40vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <img class="w-100" src="../image/website.png" alt="banner" />
+
+          <nav>
+            <ul class="row list-unstyled">
+              <li class="nav-item">
+                <button
+                  style="
+                    border: none;
+                    background-color: transparent;
+                    color: rgb(24, 24, 255);
+                  "
+                >
+                  Trang chủ
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="btnDangKy"
+                  style="
+                    border: none;
+                    background-color: transparent;
+                    color: rgb(24, 24, 255);
+                  "
+                  data-toggle="modal"
+                  data-target="#modalDangKy"
+                >
+                  Đăng ký
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="modalDangKy" tabindex="-1" role="dialog" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-title">Thông tin học viên</div>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="formDangKy">
+                    <!-- Họ tên -->
+                    <div class="form-group row">
+                      <label class="col-4" for="hoten">Họ và tên</label>
+                      <div class="col-8">
+                        <input
+                          id="hoten-txt"
+                          class="form-control"
+                          type="text"
+                          name="hoten"
+                        />
+                        <span id="hoten-error" class="text-danger">*</span>
+                      </div>
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="form-group row">
+                      <label class="col-4" for="sdt">Số điện thoại</label>
+                      <div class="col-8">
+                        <input
+                          id="sdt-txt"
+                          class="form-control"
+                          type="text"
+                          name="sdt"
+                        />
+                        <span id="sdt-error" class="text-danger">*</span>
+                      </div>
+                    </div>
+
+                    <!-- Ngày sinh -->
+                    <div class="form-group row">
+                      <label class="col-4" for="ngaysinh">Ngày sinh</label>
+                      <div class="col-8">
+                        <input
+                          id="ngaysinh-txt"
+                          class="form-control"
+                          type="date"
+                          name="ngaysinh"
+                        />
+                        <span id="ngaysinh-error" class="text-danger">*</span>
+                      </div>
+                    </div>
+
+                    <!-- Địa chỉ -->
+                    <div class="form-group row">
+                      <label class="col-4" for="diachi">Địa chỉ</label>
+                      <div class="col-8">
+                        <input
+                          id="diachi-txt"
+                          class="form-control"
+                          type="text"
+                          name="diachi"
+                        />
+                        <span id="diachi-error" class="text-danger"></span>
+                      </div>
+                    </div>
+
+                    <!-- Khóa học -->
+                    <div class="form-group row">
+                      <label class="col-4" for="diachi"
+                        >Bạn muốn tham gia khóa học nào?</label
+                      >
+                      <div class="col-8">
+                        <select
+                          class="form-control"
+                          name="khoahoc"
+                          id="khoahoc"
+                        >
+                          <option value="2">Khóa 2 tuần</option>
+                          <option value="4">Khóa 4 tuần</option>
+                          <option value="6">Khóa 6 tuần</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Học phí -->
+                    <div class="form-group row">
+                      <label class="col-4" for="hocphi">Học phí</label>
+                      <div class="col-8">
+                        <input
+                          id="hocphi-txt"
+                          class="form-control"
+                          type="text"
+                          readonly
+                          name="hocphi"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Ảnh đại diện -->
+                    <div class="form-group row">
+                      <label class="col-4" for="anh">Ảnh đại diện</label>
+                      <div class="col-8">
+                        <input
+                          id="anh-txt"
+                          class="form-control"
+                          type="file"
+                          accept=".jpg,.png,.gif"
+                          name="anh"
+                        />
+                      </div>
+                    </div>
+
+                    <button
+                      id="submitBtn"
+                      class="btn btn-primary w-100"
+                      type="submit"
+                    >
+                      Lưu
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table id="tableHocVien" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Số điện thoại</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+                <th>Khóa học</th>
+                <th>Học phí</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      function getHocPhi(tuan) {
+        switch (tuan) {
+          case "2":
+            return "5000000";
+          case "4":
+            return "8000000";
+          case "6":
+            return "9000000";
+          default:
+            return "0";
+        }
+      }
+
+      function checkValidField(sel, errSel, msg, valiCon) {
+        const value = $(sel).val();
+        if (value == "") {
+          $(errSel).text("Trường này không được rỗng");
+          return false;
+        } else {
+          $(errSel).text("");
+        }
+
+        if (valiCon) {
+          $(errSel).text("");
+          return true;
+        } else {
+          $(errSel).text(msg);
+          return false;
+        }
+      }
+
+      $("#khoahoc").change(function () {
+        const tuan = $(this).val();
+        const hocphi = getHocPhi(tuan);
+        $("#hocphi-txt").val(hocphi);
+      });
+
+      $("#formDangKy").submit(function (e) {
+        e.preventDefault();
+
+        const hotenVal = $("#hoten-txt").val();
+        const sdtVal = $("#sdt-txt").val();
+        const ngaysinhVal = $("#ngaysinh-txt").val();
+        const diachiVal = $("#diachi-txt").val();
+        const khoahocVal = $("#khoahoc").val();
+        const hocphiVal = $("#hocphi-txt").val();
+
+        // Họ tên không được bỏ trống, họ tên phải từ 2 từ trở lên, mỗi ký tự đầu phải viết hoa.
+        const isValidHoTen = checkValidField(
+          "#hoten-txt",
+          "#hoten-error",
+          "Họ tên phải từ 2 từ trở lên, mỗi ký tự đầu phải viết hoa",
+          /^[A-Z][a-z]+(\s[A-Z][a-z]+)+$/.test(hotenVal)
+        );
+
+        // Số điện thoại không rỗng, nhập theo định dạng sau: XXX-YYYYYY, trong đó X, Y là các ký tự số.
+        const isValidSDT = checkValidField(
+          "#sdt-txt",
+          "#sdt-error",
+          "Số điện thoại không rỗng, nhập theo định dạng sau: XXX-YYYYYY",
+          /^\d{3}-\d{7}$/.test(sdtVal)
+        );
+
+        // Ngày sinh hợp lệ khi tuổi trên 15 và dưới 18
+        const isValidNgaySinh = checkValidField(
+          "#ngaysinh-txt",
+          "#ngaysinh-error",
+          "Ngày sinh hợp lệ khi tuổi trên 15 và dưới 18",
+          new Date().getFullYear() - new Date(ngaysinhVal).getFullYear() > 15 &&
+            new Date().getFullYear() - new Date(ngaysinhVal).getFullYear() < 18
+        );
+
+        if (isValidHoTen && isValidSDT && isValidNgaySinh) {
+          const newRow = `
+            <tr>
+              <td>${$("#tableHocVien tbody tr").length + 1}</td>
+              <td>${hotenVal}</td>
+              <td>${sdtVal}</td>
+              <td>${ngaysinhVal}</td>
+              <td>${diachiVal}</td>
+              <td>Khóa ${khoahocVal} tuần</td>
+              <td>${hocphiVal}</td>
+            </tr>
+          `;
+
+          $("#tableHocVien tbody").append(newRow);
+
+          // Ẩn modal
+          $("#modalDangKy").modal("hide");
+        }
+      });
+    });
+  </script>
+</html>

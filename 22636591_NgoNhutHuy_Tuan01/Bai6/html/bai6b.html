@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="22636591-NgoNhutHuy-Tuan1" content="HTML Co ban" />
+    <title>Bài 6b</title>
+  </head>
+  <body>
+    <form action="" style="border: 1px solid aqua; padding: 8px">
+      <h1>Contact Us</h1>
+
+      <fieldset>
+        <legend>Your message</legend>
+
+        <table>
+          <tr>
+            <td>
+              <!-- To -->
+              <label for="to">To:</label>
+            </td>
+            <td>
+              <input id="to" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <!-- Your email -->
+              <label for="your-email">Your email:</label>
+            </td>
+
+            <td>
+              <input id="your-email" type="email" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <!-- Message -->
+              <label for="message">Message:</label>
+            </td>
+
+            <td>
+              <textarea id="message" cols="80" rows="10"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Attach File</td>
+            <td>
+              <input type="file" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>How you found us:</legend>
+
+        <table>
+          <tr>
+            <td>How did you hear of us</td>
+            <td>
+              <select name="social" id="social">
+                <option value="Google">Google</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Newsletter</td>
+            <td>
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter"
+                >Ensure this box is checked if you would like to receive email
+                updates</label
+              >
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <!-- Submit -->
+      <input type="submit" value="Send message" />
+    </form>
+  </body>
+</html>

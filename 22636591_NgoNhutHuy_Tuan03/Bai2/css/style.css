@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset CSS */
+ul {
+    list-style: none;
+}
+
+a {
+    color: unset;
+}
+
+/* Header CSS */
+header, footer {
+    color: white;
+    background: #294E79;
+}
+
+.logo {
+    background-image: url(../images/flower.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Nav */
+.nav-item {
+    padding: 8px 12px;
+    background: rgb(37, 100, 171);
+}
+
+.nav-item a:hover {
+    color: rgb(176, 176, 176);
+}
+
+/* Main */
+.content-title {
+    padding-bottom: 16px;
+    border-bottom: 4px dotted rgb(184, 147, 0);
+}
+
+.paragraph-desc {
+    color: red;
+    text-shadow: 2px 2px 4px rgb(0, 143, 0);
+}
+
+/* Form-search */
+.form-search {
+    padding-bottom: 16px;
+}
+
+.form-search > * {
+    color: white;
+    background: rgb(19, 53, 92);
+}
+
+.form-search input {
+    margin-right: 8px;
+}
+
+.form-search input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+/* Form-info */
+.form-info label {
+    margin: 0;
+}
+
+.form-info input, .form-info textarea {
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+}
+
+.form-info div.row {
+    margin-bottom: 8px;
+}
+
+/* Aside */
+aside {
+    background: rgb(226, 226, 226);
+}
+

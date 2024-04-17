@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="22636591-NgoNhutHuy-Tuan3" content="HTML Co Ban" />
+    <meta name="22636591" content="NgoNhutHuy" />
+    <meta name="IUH" content="FIT-Web Design" />
+    <title>Bài 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="d-flex justify-content-between align-items-center p-0 m-0">
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="about">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <h1 class="nav-title">Sky World</h1>
+      </header>
+
+      <main class="row pt-4">
+        <section class="col-6 section-left">
+          <h3>Registration Information</h3>
+
+          <article>
+            Start your travel planning now with our on-line tour regstration
+            form. Just tell us a little about yourself and your group and one of
+            our travel experts will contact you to create the perfect custom
+            built for your group's needs.
+          </article>
+
+          <article>
+            <form class="form w-100 mt-4">
+              <!-- Title -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">Title</h5>
+
+                <div class="col-8">
+                  <select name="title" id="title">
+                    <option value="Mr">Mr</option>
+                    <option value="Ms">Ms</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Full name -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">Full name</h5>
+
+                <div class="col-8">
+                  <input
+                    class="w-100"
+                    type="text"
+                    name="fullname"
+                    id="fullname"
+                    placeholder="Full name"
+                  />
+                </div>
+              </div>
+
+              <!-- Mailing Address -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">Mailing Address</h5>
+
+                <div class="col-8">
+                  <input
+                    class="w-100"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Mailing Address"
+                  />
+                </div>
+              </div>
+
+              <!-- City -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">City</h5>
+
+                <div class="col-8">
+                  <input
+                    class="w-100"
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="City"
+                  />
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">Country</h5>
+
+                <div class="col-8">
+                  <input
+                    class="w-100"
+                    type="text"
+                    name="country"
+                    id="country"
+                    placeholder="Country"
+                  />
+                </div>
+              </div>
+
+              <!-- Specific questions or request about your tour -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4">
+                  Specific questions or request about your tour
+                </h5>
+
+                <div class="col-8">
+                  <textarea
+                    class="w-100"
+                    name="specific"
+                    id="specific"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="d-flex mb-2">
+                <h5 class="col-4"></h5>
+
+                <div class="col-8">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button class="btn btn-secondary">Reset</button>
+                </div>
+              </div>
+            </form>
+          </article>
+        </section>
+        <section class="col-6 section-right">
+          <article>
+            <img class="w-100" src="../images/sky.png" alt="Sky" />
+          </article>
+
+          <article class="mt-5 ml-5">
+            <h2>Your've arrived.</h2>
+            <p>Journeys as great as the destinations.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>2016 Sky World Tours. All rights reserved.</p>
+
+        <p>Contact information: Student Name | StudentID | Testing Date</p>
+      </footer>
+    </div>
+  </body>
+</html>

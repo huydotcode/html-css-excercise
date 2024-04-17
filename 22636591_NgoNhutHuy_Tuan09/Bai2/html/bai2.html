@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="22636591-NgoNhutHuy-Tuan8" content="HTML Co Ban" />
+    <meta name="22636591" content="NgoNhutHuy" />
+    <meta name="IUH" content="FIT-Web Design" />
+
+    <title>Bài 2</title>
+
+    <link
+      rel="stylesheet"
+      href="../../lib/bootstrap-4.6.2-dist/css/bootstrap.min.css"
+    />
+    <script src="../../lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="../../lib/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        min-height: 150vh;
+      }
+
+      img {
+        max-height: 40vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <img class="w-100" src="../image/banner-5.png" alt="banner" />
+
+      <nav>
+        <ul class="row list-unstyled">
+          <li class="nav-item">
+            <button
+              style="
+                border: none;
+                background-color: transparent;
+                color: rgb(24, 24, 255);
+              "
+            >
+              Trang chủ
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              id="btnMoTour"
+              style="
+                border: none;
+                background-color: transparent;
+                color: rgb(24, 24, 255);
+              "
+              data-toggle="modal"
+              data-target="#modalMoTour"
+            >
+              Mở tour mới
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="modalMoTour" tabindex="-1" role="dialog" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">Thông tin tour</div>
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <form id="formMoTour">
+                <!-- Mã tour -->
+                <div class="form-group row">
+                  <label class="col-4" for="hoten">Mã tour</label>
+                  <div class="col-8">
+                    <input
+                      id="matour-txt"
+                      class="form-control"
+                      type="text"
+                      name="matour"
+                    />
+                    <span id="matour-error" class="text-danger">*</span>
+                  </div>
+                </div>
+
+                <!-- Hành trình -->
+                <div class="form-group row">
+                  <label class="col-4" for="hanhtrinh">Hành trình</label>
+                  <div class="col-8">
+                    <input
+                      id="hanhtrinh-txt"
+                      class="form-control"
+                      type="text"
+                      name="hanhtrinh"
+                    />
+                    <span id="hanhtrinh-error" class="text-danger">*</span>
+                  </div>
+                </div>
+
+                <!-- Ngày khởi hành -->
+                <div class="form-group row">
+                  <label class="col-4" for="ngaykhoihanh">Ngày khởi hành</label>
+                  <div class="col-8">
+                    <input
+                      id="ngaykhoihanh-txt"
+                      class="form-control"
+                      name="ngaykhoihanh"
+                    />
+                    <span id="ngaykhoihanh-error" class="text-danger">*</span>
+                  </div>
+                </div>
+
+                <!-- Thời gian -->
+                <div class="form-group row">
+                  <label class="col-4" for="thoigian">Thời gian</label>
+                  <div class="col-8">
+                    <input
+                      id="thoigian-txt"
+                      class="form-control"
+                      type="text"
+                      name="thoigian"
+                    />
+                    <span id="thoigian-error" class="text-danger"></span>
+                  </div>
+                </div>
+
+                <!-- Giá tour -->
+                <div class="form-group row">
+                  <label class="col-4" for="giatour">Giá tour</label>
+                  <div class="col-8">
+                    <input
+                      id="giatour-txt"
+                      class="form-control"
+                      type="text"
+                      name="giatour"
+                    />
+                    <span id="giatour-error" class="text-danger">*</span>
+                  </div>
+                </div>
+
+                <!-- Ảnh đại diện -->
+                <div class="form-group row">
+                  <label class="col-4" for="anh">Ảnh đại diện</label>
+                  <div class="col-8">
+                    <input
+                      id="anh-txt"
+                      class="form-control"
+                      type="file"
+                      accept=".jpg,.png,.gif"
+                      name="anh"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  id="submitBtn"
+                  class="btn btn-primary w-100"
+                  type="submit"
+                >
+                  Lưu
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <h5 class="text-center">DANH SÁCH TOUR - DU LỊCH VIỆT</h5>
+        <table id="tableMoTour" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã tour</th>
+              <th>Hành trình</th>
+              <th>Ngày khởi hành</th>
+              <th>Thời gian</th>
+              <th>Giá tour</th>
+              <th>Ảnh đại diện</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </main>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      function checkValidField(sel, errSel, msg, valiCon) {
+        const value = $(sel).val();
+
+        if (valiCon) {
+          $(errSel).text("");
+          return true;
+        } else {
+          $(errSel).text(msg);
+          return false;
+        }
+      }
+
+      $("#formMoTour").submit(function (e) {
+        e.preventDefault();
+        let matour = $("#matour-txt").val();
+        let hanhtrinh = $("#hanhtrinh-txt").val();
+        let ngaykhoihanh = $("#ngaykhoihanh-txt")
+          .val()
+          .split("/")
+          .reverse()
+          .join("/");
+        let thoigian = $("#thoigian-txt").val();
+        let giatour = $("#giatour-txt").val();
+        let anh = $("#anh-txt").val();
+
+        // Mã Tour theo mẫu: XXX-XXX-mm-yyyy với X là các ký tự hoa chỉ thông tin điểm khởi hành và điểm đến, mm: tháng khởi hành, yyyy: năm khởi hành
+        const isValidMatour = checkValidField(
+          "#matour-txt",
+          "#matour-error",
+          "Mã Tour theo mẫu: XXX-XXX-mm-yyyy",
+          /^[A-Z]{3}-[A-Z]{3}-[0-9]{2}-[0-9]{4}$/.test(matour)
+        );
+
+        // Hành trình không được để trống
+        const isValidHanhtrinh = checkValidField(
+          "#hanhtrinh-txt",
+          "#hanhtrinh-error",
+          "Hành trình không được để trống",
+          hanhtrinh !== ""
+        );
+
+        // Ngày khởi hành phải sau ngày hiện tại 30 ngày
+        const isValidNgaykhoihanh = checkValidField(
+          "#ngaykhoihanh-txt",
+          "#ngaykhoihanh-error",
+          "Ngày khởi hành phải sau ngày hiện tại 30 ngày",
+          new Date(ngaykhoihanh) >
+            new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+        );
+
+        // Thời gian không được để trống
+        const isValidThoigian = checkValidField(
+          "#thoigian-txt",
+          "#thoigian-error",
+          "Thời gian không được để trống",
+          thoigian !== ""
+        );
+
+        // Giá tour là số >0
+        const isValidGiatour = checkValidField(
+          "#giatour-txt",
+          "#giatour-error",
+          "Giá tour là số > 0",
+          parseInt(giatour) > 0
+        );
+
+        console.log(anh);
+
+        if (
+          isValidMatour &&
+          isValidHanhtrinh &&
+          isValidNgaykhoihanh &&
+          isValidThoigian &&
+          isValidGiatour
+        ) {
+          $("#tableMoTour tbody").append(
+            `<tr>
+              <td>${$("#tableMoTour tbody tr").length + 1}</td>
+              <td>${matour}</td>
+              <td>${hanhtrinh}</td>
+              <td>${ngaykhoihanh}</td>
+              <td>${thoigian}</td>
+              <td>${giatour}</td>
+              <td>${anh}</td>
+            </tr>`
+          );
+          $("#modalMoTour").modal("hide");
+        }
+      });
+    });
+  </script>
+</html>

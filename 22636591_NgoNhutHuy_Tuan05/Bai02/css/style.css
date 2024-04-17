@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #ffcc5c;
+    --secondary-color: #232730;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Navbar */
+.navbar-brand a {
+    font-size: 2.2rem;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item {
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    /* color: white; */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Button */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+}
+
+.btn-primary:active {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary:focus {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #d49f2d;
+    color: white;
+}
+
+/* Banner */
+.banner-title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-top: 10rem;
+}
+
+.banner-paragraph {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    max-width: 40%;
+    font-family: 'Roboto', sans-serif;  
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.navigation button {
+    font-size: 1rem;
+}
+
+.navigation button.active {
+    color: var(--primary-color);
+}
+
+/* lg-screen */
+@media (max-width: 960px) {
+    .nav-center {
+        position: relative;
+        left: 0;    
+        transform: none;
+    }
+}
+
+/* Content */
+.content {
+    color: black;
+}

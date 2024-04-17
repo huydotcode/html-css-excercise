@@ -1,0 +1,5 @@
+.aside-content {
+    border: 6px solid var(--primary-color);
+    background-color: #e1dca4;
+    height: fit-content;
+}

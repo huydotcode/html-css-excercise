@@ -1,0 +1,16 @@
+header {
+    background-image: url(../images/background.png);
+}
+
+a {
+    text-decoration: none;
+    color: unset
+}
+
+.navbar, footer {
+   background: gray; 
+}
+
+.text-red {
+    color: red;
+}

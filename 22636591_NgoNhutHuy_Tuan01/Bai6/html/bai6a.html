@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="22636591-NgoNhutHuy-Tuan1" content="HTML Co ban" />
+    <title>Bài 6a</title>
+  </head>
+  <body>
+    <form action="" style="background-color: aqua; padding: 8px">
+      <h1>Registration Form</h1>
+
+      <table style="width: 100%">
+        <tr>
+          <td><label for="first-name">First Name:</label></td>
+          <td>
+            <input type="text" id="first-name" name="first-name" />
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="address1">Address 1 :</label>
+          </td>
+          <td>
+            <input type="text" id="address1" name="address1" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="address2">Address 2 :</label></td>
+          <td>
+            <input type="text" id="address2" name="address2" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="city">City:</label></td>
+          <td>
+            <input type="text" id="city" name="city" />
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" />
+            <label for="zip">Zip:</label>
+            <input type="text" id="zip" name="zip" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="country">Country:</label>
+          </td>
+          <td>
+            <select name="country" id="country">
+              <option value="Vietnam">Vietnam</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Product:</td>
+          <td>
+            <select name="product" id="product">
+              <option value="Product 1">Product 1</option>
+              <option value="Product 2">Product 2</option>
+              <option value="Product 3">Product 3</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="date-purchased">Date Purchased:</label>
+          </td>
+          <td>
+            <input type="text" id="date-purchased" name="date-purchased" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="serial">Serial #:</label>
+          </td>
+          <td>
+            <input type="text" id="serial" name="serial" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Used for:</td>
+          <td>
+            <input type="radio" id="home" name="used-for" value="home" />
+            <label for="home">Home</label>
+
+            <input
+              type="radio"
+              id="educational-institution"
+              name="used-for"
+              value="educational-institution"
+            />
+            <label for="educational-institution">Educational Institution</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="radio"
+              id="business"
+              name="used-for"
+              value="business"
+            />
+            <label for="business">Business</label>
+
+            <input type="radio" id="other" name="used-for" value="other" />
+            <label for="other">Other</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="radio"
+              id="government"
+              name="used-for"
+              value="government"
+            />
+            <label for="government">Government</label>
+          </td>
+        </tr>
+
+        <!-- Windows UNIX Macintosh Other -->
+        <tr>
+          <td>System (check all that apply)</td>
+          <td>
+            <input type="checkbox" id="windows" name="system" value="windows" />
+            <label for="windows">Windows</label>
+
+            <input type="checkbox" id="unix" name="system" value="unix" />
+            <label for="unix">UNIX</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input
+              type="checkbox"
+              id="macintosh"
+              name="system"
+              value="macintosh"
+            />
+            <label for="macintosh">Macintosh</label>
+
+            <input type="checkbox" id="other" name="system" value="other" />
+            <label for="other">Other</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="comments">Comments: </label>
+          </td>
+          <td colspan="2">
+            <textarea
+              name="comments"
+              id="comments"
+              cols="100"
+              rows="10"
+            ></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Click to register" />
+            <input type="reset" value="Click to cancel" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

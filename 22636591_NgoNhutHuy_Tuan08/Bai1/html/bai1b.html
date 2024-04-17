@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="22636591-NgoNhutHuy-Tuan8" content="HTML Co Ban" />
+    <meta name="22636591" content="NgoNhutHuy" />
+    <meta name="IUH" content="FIT-Web Design" />
+
+    <title>Bài 1</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav row p-2 justify-content-between">
+        <h4 class="text-white col-6 d-flex align-items-center">Facebook</h4>
+
+        <div class="d-flex align-items-center col-6">
+          <form>
+            <div class="row">
+              <div class="col-4 form-group m-0 mr-2">
+                <label class="m-0" style="font-size: 12px" for="email-or-phone"
+                  >Email hoặc điện thoại</label
+                >
+                <input type="text" id="email-or-phone" />
+                <div class="form-check d-flex align-items-center">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                    id="remember"
+                  />
+                  <label
+                    style="font-size: 12px"
+                    for="remember"
+                    class="form-check-label"
+                    >Duy trì đăng nhập</label
+                  >
+                </div>
+              </div>
+              <div class="col-4 form-group m-0 mr-2">
+                <label class="m-0" style="font-size: 12px" for="password"
+                  >Mật khẩu</label
+                >
+                <input type="text" id="password" />
+                <div class="d-flex">
+                  <a class="text-black-50" href="#" style="font-size: 12px"
+                    >Quên mật khẩu</a
+                  >
+                </div>
+              </div>
+              <div class="col-3 d-flex align-items-center">
+                <button class="btn-primary">Đăng nhập</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+
+      <main class="mt-4">
+        <div class="row">
+          <div
+            class="col-6 text-info d-flex align-items-center justify-content-center"
+            style="font-size: 40px"
+          >
+            Cảm ơn bạn đã ghé thăm
+          </div>
+          <div class="col-6">
+            <h1>Đăng ký</h1>
+            <p>Miễn phí và sẽ luôn như vậy</p>
+
+            <form class="form">
+              <div class="form-group row">
+                <input
+                  placeholder="Họ"
+                  class="col-6 mr-2"
+                  type="text"
+                  id="first-name"
+                />
+                <input
+                  class="col-5"
+                  type="text"
+                  id="last-name"
+                  placeholder="Tên"
+                />
+              </div>
+
+              <div class="form-group row">
+                <input
+                  class="col-12"
+                  type="text"
+                  id="email"
+                  placeholder="Email đăng nhập"
+                />
+              </div>
+
+              <div class="form-group row">
+                <input
+                  class="col-12"
+                  type="text"
+                  id="re-email"
+                  placeholder="Nhập lại email"
+                />
+              </div>
+
+              <div class="form-group row">
+                <input
+                  class="col-12"
+                  type="text"
+                  id="password"
+                  placeholder="Mật khẩu"
+                />
+              </div>
+
+              <div class="form-group row">
+                <input
+                  class="col-12"
+                  type="text"
+                  id="year"
+                  placeholder="Năm sinh"
+                />
+              </div>
+
+              <button class="btn btn-primary">Đăng ký</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../js/script.js"></script>
+</html>

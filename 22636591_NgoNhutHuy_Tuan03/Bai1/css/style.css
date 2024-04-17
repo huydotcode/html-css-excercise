@@ -1,0 +1,92 @@
+body {
+    color: white;
+}
+
+/* Reset CSS */
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Container CSS */
+
+.container {
+    background: rgb(87,212,227);
+    background: linear-gradient(180deg, rgba(87,212,227,1) 0%, rgba(3,152,170,1) 100%);
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    margin-right: 1rem;
+
+    padding: 0.5rem 1rem;
+}
+
+.nav-item a:hover {
+    color: rgb(115, 115, 115);
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+    /* Set a text blue shadow */
+    text-shadow: 0 0 10px #0003b4;
+}
+
+main {
+    border-top: 5px dotted white;
+    border-bottom: 5px dotted white;
+}
+
+.form h5 {
+    margin: 0;
+}
+
+.section-right h2 {
+    /* Text shadow blue */
+    font-size: 2.2rem;
+    color: rgba(0, 20, 167, 0.6);
+    font-weight: 800;
+    text-shadow: 2px 2px 2px rgba(0, 20, 167, 0.6);
+}
+
+.section-right p {
+    font-size: 1.6rem;
+    color: rgba(0, 20, 167, 0.6);
+    font-weight: 700;
+
+}
+
+/* Footer */
+footer {
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}

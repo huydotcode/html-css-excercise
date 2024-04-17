@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="22636591-NgoNhutHuy-Tuan2" content="HTML Co Ban" />
+    <meta name="IUH" content="FIT-Web Design" />
+    <title>Bài 1</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Example Cafe Menu</h1>
+
+        <nav>
+          <div style="width: 16px; height: 16px; margin-right: 1rem">
+            <img
+              class="home-icon"
+              src="../images/icons8-home-50.png"
+              alt="Home"
+            />
+          </div>
+
+          <ul>
+            <li>
+              <a href="#starters">Starters</a>
+            </li>
+
+            <li>
+              <a href="#main-courses">Main Courses</a>
+            </li>
+
+            <li>
+              <a href="#desserts">Desserts</a>
+            </li>
+          </ul>
+
+          <!-- Searchbar -->
+          <div class="search-bar">
+            <input type="text" />
+            <button>Search</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="content-container">
+        <aside class="aside-left">
+          <ul>
+            <li>Aside item 1</li>
+            <li>Aside item 2</li>
+            <li>Aside item 3</li>
+            <li>Aside item 4</li>
+          </ul>
+
+          <img src="../images/company.png" alt="" />
+        </aside>
+
+        <main class="content">
+          <article>
+            <h1 class="content-title" id="starters">Starters</h1>
+            <ul class="content-list">
+              <li class="content-item">
+                Chestnut and Mushroom Goujon <a href="#">(v)</a>
+              </li>
+              <li class="content-item">
+                Goat Cheese Salad <a href="#">(v)</a>
+              </li>
+              <li class="content-item">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    color: darksalmon;
+                    font-weight: 800;
+                  "
+                >
+                  Honey Soy Chicken Kebabs
+                </span>
+
+                <a href="#">(v)</a>
+              </li>
+              <li class="content-item">
+                Seafood Salad
+                <a href="#">(v)</a>
+              </li>
+            </ul>
+
+            <a class="back-to-top" href="#">Back to top</a>
+          </article>
+
+          <article>
+            <h1 class="content-title" id="desserts">Desserts</h1>
+
+            <ul class="content-list">
+              <li class="content-item">Lemon Sorbet <a href="#">(v)</a></li>
+              <li class="content-item">
+                Chocolate Mud Pie <a href="#">(v)</a>
+              </li>
+              <li class="content-item">Pecan Pie <a href="#">(v)</a></li>
+              <li class="content-item">
+                Selection of Fine Cheeses from Around the World
+                <a href="#">(v)</a>
+              </li>
+            </ul>
+
+            <a class="back-to-top" href="#">Back to top</a>
+          </article>
+
+          <article>
+            <h1 class="content-title">Information</h1>
+
+            <table>
+              <tr>
+                <td>
+                  <input type="text" placeholder="First name" />
+                </td>
+
+                <td>
+                  <input type="text" placeholder="Last name" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="text" placeholder="Email" />
+                </td>
+
+                <td>
+                  <input type="text" placeholder="Phone" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <select name="country" id="country">
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Japan">Japan</option>
+                  </select>
+                </td>
+
+                <td style="display: flex">
+                  <span style="display: flex; align-items: center">
+                    <input type="checkbox" name="Vietnamese" id="Vietnamese" />
+                    <label for="Vietnamese">Vietnamese</label>
+                  </span>
+
+                  <span
+                    style="display: flex; align-items: center; margin-left: 8px"
+                  >
+                    <input type="checkbox" name="Foreign" id="Foreign" />
+                    <label for="Foreign">Foreign</label></span
+                  >
+                </td>
+              </tr>
+
+              <!-- Text area -->
+              <tr>
+                <td colspan="2">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="3"
+                    placeholder="Message"
+                  ></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <button>Submit</button>
+                  <button>Cancel</button>
+                </td>
+              </tr>
+            </table>
+          </article>
+        </main>
+
+        <aside class="aside-right">
+          <h2>Events</h2>
+
+          <section>
+            <h5>Regular Meetings</h5>
+            <img src="../images/meeting.png" alt="Meeting" />
+            <p>
+              Host your regular team meetings or activities in the comfort of
+              your own private room. Charge up on Kith's aromatic coffee and
+              delectable dishes for that extra boost in your work!
+            </p>
+            <span>Read more...</span>
+          </section>
+
+          <section>
+            <h5>Product Launches</h5>
+            <img src="../images/launch.png" alt="Meeting" />
+            <p>
+              Launch your product with ease in a space that truly fits its
+              image. Create an unforgettable experience for your guests with our
+              spacious outlets! Whether you want to host an intimate celebration
+              or launch an event for hundreds of guests, Kith's space is
+              customisable to your needs
+            </p>
+            <span>Read more...</span>
+          </section>
+        </aside>
+      </div>
+
+      <footer>
+        <p>
+          &copy; 2019 <a href="#">Example Cafe</a> | Designed by
+          <a href="#">IUH</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

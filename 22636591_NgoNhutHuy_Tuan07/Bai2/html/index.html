@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="22636591-NgoNhutHuy-Tuan6" content="HTML Co Ban" />
+    <meta name="22636591" content="NgoNhutHuy" />
+    <meta name="IUH" content="FIT-Web Design" />
+
+    <title>Bài 2</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <img
+          class="w-100"
+          src="https://images.template.net/106689/free-annual-car-meet-banner-template-uoaa6.jpg"
+          alt="Banner"
+        />
+      </header>
+
+      <main class="mt-4">
+        <div class="row">
+          <div class="col-4">
+            <table class="table table-bordered text-center">
+              <thead>
+                <th class="text-info" colspan="2">Bản tin thị trường</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Vàng</td>
+                </tr>
+                <tr>
+                  <td>Mua vào</td>
+                  <td>Bán ra</td>
+                </tr>
+                <tr>
+                  <td id="vang-mua-vao"></td>
+                  <td id="vang-ban-ra"></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">USD</td>
+                </tr>
+                <tr>
+                  <td id="usd-mua-vao">Mua vào</td>
+                  <td id="usd-ban-ra">Bán ra</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-4">
+            <form>
+              <table class="table table-bordered">
+                <thead>
+                  <th class="text-info" colspan="2">Cập nhật giá thị trường</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mua vào</td>
+                    <td>
+                      <input class="form-control" name="mua-vao" id="mua-vao" />
+                      <p class="text-warning" id="mua-vao-error"></p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Bán ra</td>
+                    <td>
+                      <input class="form-control" name="ban-ra" id="ban-ra" />
+                      <p class="text-warning" id="ban-ra-error"></p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Loại xe</td>
+                    <td>
+                      <select name="loai-xe" id="select-loai-xe">
+                        <option value="../images/car1.jpg;35000">Toyota</option>
+                        <option value="../images/car2.jpg;15000">KIA</option>
+                        <option value="../images/car3.jpg;40000">Ford</option>
+                        <option value="../images/car4.jpg;32000">Civic</option>
+                        <option value="../images/car5.jpg;50000">
+                          Ferrari
+                        </option>
+                        <option value="../images/car7.jpg;45000">
+                          Mercedes
+                        </option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td class="form-check">
+                      <input type="radio" value="1" name="tiente" id="vang" />
+                      <label for="vang">Vàng</label>
+                      <input type="radio" value="0" name="tiente" id="usd" />
+                      <label for="usd">USD</label>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>
+                      <button
+                        id="update-btn"
+                        class="btn btn-primary"
+                        type="submit"
+                      >
+                        Update
+                      </button>
+                      <button id="state-btn" class="btn btn-danger">
+                        State
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+          <div class="col-4">
+            <aside class="content border p-2">
+              <h5 class="text-center text-info">Bảng báo giá</h5>
+              <p class="">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
+                enim earum optio id ipsam nihil eligendi eveniet repudiandae
+                labore facere exercitationem, officia itaque minus vel
+                perferendis quae autem magnam velit.
+              </p>
+              <div class="image-card">
+                <img
+                  id="image-car"
+                  class="w-100"
+                  src="https://i0.wp.com/sunrisedaycamp.org/wp-content/uploads/2020/10/placeholder.png?ssl=1"
+                  alt=""
+                />
+              </div>
+              <p class="text-primary" style="font-size: 30px">
+                <span>Giá</span>
+                <span id="price-car">...</span>
+                <span>USD</span>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../js/script.js"></script>
+</html>

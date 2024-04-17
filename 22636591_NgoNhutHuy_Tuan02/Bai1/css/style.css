@@ -1,0 +1,237 @@
+/* Variants */
+:root {
+    --primary-color: #d77171;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Reset CSS*/
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    margin-bottom: 8px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+
+    padding: 3rem;
+    text-shadow: 5px 5px 10px #ac5050;
+}
+
+header nav {
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header .home-icon {
+    width: 100%;
+    height: 100%;
+}
+
+header ul li {
+    padding: 2px 16px;
+    border-left: 1px solid #ac5050;
+    border-right: 1px solid #ac5050;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header .search-bar {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 2px 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px #ac5050;
+}
+
+.search-bar button {
+    height: 100%;
+}
+
+/* Aside left */
+.aside-left {
+    max-width: 200px;
+}
+
+.aside-left ul li{
+    width: 200px;
+    padding: 6px 8px;
+    margin: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+}
+
+.aside-left img {
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    filter: drop-shadow(10px 10px 10px #ac5050);
+}
+
+/* Main */
+.content {
+    flex: 1;
+    margin: 0 4rem;
+    margin-bottom: 4rem;
+}
+
+.content-title {
+    padding: 0 16px;
+    background-color: var(--primary-color);
+    color: rgb(207, 0, 0);
+    letter-spacing: 8px;
+
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content-list {
+    list-style: outside;
+}
+
+.content-item a {
+    color: red;
+    font-weight: 800;
+}
+
+.back-to-top {
+    color: red;
+    text-decoration: underline;
+}
+
+.content table {
+    width: 100%;
+    border-spacing: 2rem;
+}
+
+.content table td input {
+    width: 100%;
+    padding: 1rem;
+}
+
+.content table td select {
+    width: 100%;
+    padding: 1rem;
+}
+
+.content table td textarea {
+    width: 100%;
+    padding: 1rem;
+}
+
+.content table td button {
+    padding: 1rem;
+}
+
+/* Aside right */
+.aside-right {
+    width: 300px;
+    height: fit-content;
+    background: black;
+    color: white;
+
+    padding: 2rem;
+}
+
+.aside-right h2{
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+}
+
+.aside-right section {
+    margin-bottom: 3rem;
+}
+
+.aside-right h5 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.aside-right img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.aside-right p {
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.aside-right span {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+

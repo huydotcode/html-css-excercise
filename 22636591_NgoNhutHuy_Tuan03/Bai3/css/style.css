@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Header */
+header {
+    background: rgb(173, 46, 0);
+}
+
+header h1 {
+    color: rgb(88, 88, 0);
+    text-shadow: -4px -4px 4px white;
+    padding: 16px;
+    
+}
+
+.nav {
+    border: 1px solid black;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 4px 8px;
+    color: rgb(158, 42, 0);
+}
+
+/* Main */
+.content-image {
+    background: url('../images/line.png');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+
+    height: 100px;
+}
+
+article {
+    padding: 16px;
+}
+
+.content h2 {
+    color: rgb(128, 128, 15);
+    letter-spacing: 2px;
+}
+
+article p {
+    color: rgb(128, 128, 15);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.form-sign-up {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-sign-up input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 16px;
+}
+
+.form-sign-up button {
+    width: fit-content;
+    background-color: rgb(88, 88, 0);
+    text-transform: uppercase;
+}
+
+aside {
+    border-left: 1px solid rgb(183, 183, 183);
+}
+
+aside h2 {
+    color: rgb(88, 88, 0);
+}
+
+.article-top {
+    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: rgb(255, 227, 205);
+}
+
+.content-list {
+    margin-top: 32px;
+    margin-left: 32px;
+    color: rgb(88, 88, 0);
+    list-style: square;
+}
+
+.img {
+    --top: 1;
+  --width: 80px;
+  --bottom: 60px;
+  
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: 1px solid rgb(201, 201, 201);
+  
+  width:  var(--width);
+  height: calc(var(--bottom));
+  transform: translate(0, var(--top));
+  float: left;
+
+  
+  shape-outside: polygon(0 var(--top), var(--width) var(--top), var(--width) var(--bottom), 0 var(--bottom));
+  
+  clip-path: polygon(0 0, var(--width) 0, var(--width) calc(var(--bottom) - var(--top)), 0 calc(var(--bottom) - var(--top)));
+}
+
+.article-bottom p {
+    text-align: justify;
+}
+/* Footer */
+footer {
+    background-image:   url('../images/corner2.png'), url('../images/corner1.png'),
+                        url("../images/footer.png"), url('../images/corner3.png'),
+                        url('../images/corner4.png');
+    background-position: left bottom, left top, center top, right top, right bottom;
+    background-repeat: no-repeat, no-repeat, repeat-x, no-repeat, no-repeat;
+    background-size: 20px 20px, 20px 20px, auto 10px, 20px 20px, 20px 20px;
+
+    height: 40px;
+}

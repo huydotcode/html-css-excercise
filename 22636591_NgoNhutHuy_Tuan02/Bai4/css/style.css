@@ -1,0 +1,36 @@
+:root {
+    --primary-color: #dab269;
+}
+
+header {
+    border-bottom: 3px solid var(--primary-color);
+    height: 78px;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-weight: 800;
+    margin: 16px;
+}
+
+.navbar {
+    background-image: url(../images/back.jpg);
+    background-repeat: repeat;
+    background-size: 300px;
+}
+
+.list-item {
+    color: rgb(37, 37, 129);
+    font-weight: 800;
+    border-bottom: 3px dashed var(--primary-color);
+}
+
+
+footer {
+    margin-top: 16px;
+    padding-top: 2px;
+    border-top: 3px solid var(--primary-color);
+    font-size: 2rem;
+    color: var(--primary-color);
+    
+}
